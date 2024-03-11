@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans";
+}
+body main {
+  width: min(95%, 375px);
+  margin: 0 auto;
+  background-image: linear-gradient(white, #F0F1FF);
+}
+body main .top_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+}
+body main .top_container .button1 {
+  width: 140px;
+  height: 48px;
+  border-radius: 1.5rem;
+  border: 0;
+  background-color: #13183f;
+  color: white;
+  margin-left: 5.5rem;
+}
+body main .top_container .dark-logo {
+  height: 35px;
+  width: 89px;
+}
+body main .hero-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 0 2rem;
+}
+body main .hero-container h1 {
+  font-size: 2.5rem;
+  color: #13183f;
+}
+body main .hero-container .intro-text {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #83869A;
+}
+body main .hero-container .button2 {
+  height: 56px;
+  width: 167px;
+  border-radius: 2rem;
+  border: 0;
+  background-image: linear-gradient(#F02AA6, #FF6F48);
+  color: white;
+}
+body main .hero-container .hero {
+  width: 327px;
+  height: 301px;
+}
+body main .course-containers {
+  height: 1695px;
+  display: grid;
+  grid-template-columns: 343px;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(white, #F0F1FF);
+}
+body main .course-containers h2 {
+  background-image: linear-gradient(#F02AA6, #FF6F48);
+  font-size: 1.5rem;
+  color: white;
+  height: 120px;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+}
+body main .course-containers article {
+  height: 283px;
+  padding: 1.5rem 2rem;
+  background-color: white;
+}
+body main .course-containers article h3 {
+  font-size: 1.25rem;
+  color: #13183f;
+}
+body main .course-containers article p {
+  line-height: 1.625rem;
+  color: #83869A;
+}
+body main .course-containers article a {
+  text-decoration: none;
+  color: #F74780;
+  font-size: 1.125rem;
+}
+body main .bottom_container {
+  height: 120px;
+  width: 375px;
+  background-color: #13183f;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+body main .bottom_container .button3 {
+  width: 140px;
+  height: 48px;
+  border-radius: 1.5rem;
+  border: 0;
+  background-image: linear-gradient(#4851FF, #F02AA6);
+  margin-left: 5.5rem;
+  color: white;
+}
+body main .bottom_container .light-logo {
+  height: 35px;
+  width: 89px;
+}/*# sourceMappingURL=styles.css.map */
