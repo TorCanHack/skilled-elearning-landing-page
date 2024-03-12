@@ -14,7 +14,8 @@ body main .top_container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
 }
 body main .top_container .button1 {
   width: 140px;
@@ -52,9 +53,15 @@ body main .hero-container .button2 {
   background-image: linear-gradient(#F02AA6, #FF6F48);
   color: white;
 }
-body main .hero-container .hero {
+body main .hero-mobile {
   width: 327px;
   height: 301px;
+}
+body main .hero-tablet {
+  display: none;
+}
+body main .hero-desktop {
+  display: none;
 }
 body main .course-containers {
   height: 1695px;
@@ -112,4 +119,64 @@ body main .bottom_container .button3 {
 body main .bottom_container .light-logo {
   height: 35px;
   width: 89px;
+}
+@media screen and (min-width: 768px) {
+  body main {
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  body main .top_container {
+    width: 689px;
+    align-items: end;
+  }
+  body main .top_container .button1 {
+    margin-left: 30rem;
+  }
+  body main .hero-container {
+    position: relative;
+    right: 9rem;
+    top: 5rem;
+    width: 398px;
+    height: 284px;
+    overflow: hidden;
+    padding: 0;
+  }
+  body main .hero-container h1 {
+    margin-top: -0.5rem;
+  }
+  body main .hero-container p {
+    margin-top: -0.5rem;
+  }
+  body main .hero-mobile {
+    display: none;
+  }
+  body main .hero-tablet {
+    position: relative;
+    left: 22rem;
+    bottom: 27rem;
+    display: inline;
+    width: 640px;
+    height: 640px;
+  }
+  body main .course-containers {
+    height: 900px;
+    margin-top: -30rem;
+    grid-template-columns: 339px 339px;
+    grid-auto-rows: 259px;
+    gap: 3rem;
+  }
+  body main .course-containers h2 {
+    height: 259px;
+  }
+  body main .bottom_container {
+    width: 768px;
+    height: 120px;
+  }
+  body main .bottom_container .button3 {
+    margin-left: 30rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

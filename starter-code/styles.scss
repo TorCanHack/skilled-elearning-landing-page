@@ -21,13 +21,13 @@ $psjFonts: "Plus Jakarta Sans";
 body {
 
     font-family: $psjFonts;
+    
 
     
 
     main {
 
         width: min(95%, 375px);
-        
         margin: 0 auto;
         background-image: $gradient3;
 
@@ -37,7 +37,8 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-top: 2rem;
+            margin-top: 1rem;
+            padding-top: 1.5rem;
     
             
             .button1{
@@ -85,11 +86,20 @@ body {
                 color: $cocaine;
             }
 
-            .hero {
-                width: 327px;
-                height: 301px;
-            }
        }
+
+       .hero-mobile {
+            width: 327px;
+            height: 301px;
+        }
+
+        .hero-tablet {
+            display: none;
+        }
+
+        .hero-desktop {
+            display: none;
+        }
 
         .course-containers {
 
@@ -161,5 +171,81 @@ body {
                 width: 89px;
             }
         }
+    }
+
+    @media screen and (min-width: 768px) {
+
+        main {
+            width: 768px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            .top_container {
+                width: 689px;
+                align-items: end;
+
+                .button1{
+                    margin-left: 30rem;
+                }
+            }
+
+            .hero-container {
+                position: relative;
+                right: 9rem;
+                top: 5rem;
+                width: 398px;
+                height: 284px;
+                overflow: hidden;
+                padding: 0;
+
+                h1 {
+                    margin-top: -0.5rem;
+                }
+
+                p {
+                    margin-top: -0.5rem;
+                }
+            }
+
+            .hero-mobile{
+                display: none;
+            }
+
+            .hero-tablet {
+                position: relative;
+                left: 22rem;
+                bottom: 27rem;
+                display: inline;
+                width: 640px;
+                height: 640px;
+            }
+
+            .course-containers {
+                
+                height: 900px;
+                margin-top: -30rem;
+                grid-template-columns: 339px 339px;
+                grid-auto-rows: 259px;
+                gap: 3rem;
+
+                h2 {
+                    height: 259px;
+                }
+                
+            }
+
+            .bottom_container {
+                width: 768px;
+                height: 120px;
+                
+                .button3 {
+                    margin-left: 30rem;
+                }
+            }
+        }
+        
     }
 }
