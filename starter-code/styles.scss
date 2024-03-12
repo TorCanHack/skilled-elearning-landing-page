@@ -1,8 +1,8 @@
 
 $darkColor1: #13183f;
-$cocaine: white;
-$neutral: #83869A;
-$neutral2: #979797;
+$colorWhite: white;
+$neutralColor1: #83869A;
+$neutralColor2: #979797;
 $brightColor: #F74780;
 $colorStart1: #F02AA6;
 $colorEnd1: #FF6F48;
@@ -11,8 +11,10 @@ $colorEnd2: #F02AA6;
 $colorEnd3: #F0F1FF;
 $gradient1: linear-gradient($colorStart1, $colorEnd1);
 $gradient2: linear-gradient($colorStart2, $colorEnd2);
-$gradient3: linear-gradient($cocaine, $colorEnd3);
-$psjFonts: "Plus Jakarta Sans";
+$gradient3: linear-gradient($colorWhite, $colorEnd3);
+$hoverGradient1: linear-gradient(rgba(240, 42, 166, 0.5), rgba(255, 111, 72, 0.5));
+$hoverGradient2: linear-gradient(rgba(71, 82, 225, 0.5), rgba(240, 42, 166, 0.5));
+$psjFonts: "Plus Jakarta Sans", sans-serif;
 
 * {
     box-sizing: border-box;
@@ -48,7 +50,14 @@ body {
                 border: 0;
                 background-color: $darkColor1;
                 color: white;
-                margin-left: 5.5rem;
+                margin-left: 5rem;
+                position: relative;
+                z-index: 10;
+
+                &:hover {
+                    background-color: #666CA3;
+                    cursor: pointer;
+                }
             }
 
             .dark-logo {
@@ -56,12 +65,13 @@ body {
                 width: 89px;
             }
 
+
             
         }
 
        .hero-container {
 
-            background-color: $cocaine;
+            background-color: $colorWhite;
             display: flex;
             flex-direction: column;
             padding: 0 1rem 0 2rem;
@@ -74,7 +84,7 @@ body {
             .intro-text {
                 font-size: 1rem;
                 line-height: 1.625rem;
-                color: $neutral;
+                color: $neutralColor1;
             }
 
             .button2 {
@@ -83,7 +93,12 @@ body {
                 border-radius: 2rem;
                 border: 0;
                 background-image: $gradient1;
-                color: $cocaine;
+                color: $colorWhite;
+
+                &:hover {
+                    background-image: $hoverGradient1;
+                    cursor: pointer;
+                }
             }
 
        }
@@ -114,7 +129,7 @@ body {
             h2 {
                 background-image: $gradient1;
                 font-size: 1.5rem;
-                color: $cocaine;
+                color: $colorWhite;
                 height: 120px;
                 border-radius: 0.5rem;
                 padding: 1.5rem 2rem;
@@ -123,7 +138,8 @@ body {
             article {
                 height: 283px;
                 padding: 1.5rem 2rem;
-                background-color: $cocaine;
+                background-color: $colorWhite;
+                
 
                 h3 {
                     font-size: 1.25rem;
@@ -132,13 +148,17 @@ body {
 
                 p {
                     line-height: 1.625rem;
-                    color: $neutral;
+                    color: $neutralColor1;
                 }
 
                 a {
                     text-decoration: none;
                     color: $brightColor;
                     font-size: 1.125rem;
+
+                    &:hover {
+                        color: #FFA7c3;
+                    }
                 }
             }
 
@@ -148,7 +168,7 @@ body {
         .bottom_container {
             
             height: 120px;
-            width: 375px;
+            width: 100%;
             background-color: $darkColor1;
             display: flex;
             flex-direction: row;
@@ -163,7 +183,12 @@ body {
                 border: 0;
                 background-image: $gradient2;
                 margin-left: 5.5rem;
-                color: $cocaine;
+                color: $colorWhite;
+
+                &:hover {
+                    background-image: $hoverGradient2;
+                    cursor: pointer;
+                }
             }
 
             .light-logo {
@@ -171,6 +196,7 @@ body {
                 width: 89px;
             }
         }
+
     }
 
     @media screen and (min-width: 768px) {
@@ -185,7 +211,7 @@ body {
 
             .top_container {
                 width: 689px;
-                align-items: end;
+                align-items: center;
 
                 .button1{
                     margin-left: 30rem;
@@ -221,6 +247,7 @@ body {
                 display: inline;
                 width: 640px;
                 height: 640px;
+                z-index: 1;
             }
 
             .course-containers {
@@ -248,4 +275,105 @@ body {
         }
         
     }
+
+    @media screen and (min-width: 1440px) {
+
+        main {
+            width: 1440px;
+
+            .top_container {
+                width: 1440px;
+                margin-top: -1rem;
+                
+                .dark-logo {
+                    width: 111.17px;
+                    height: 27.78px;
+                }
+
+                .button1 {
+                    margin-left: 52rem;
+                    width: 167px;
+                    height: 56px;
+                }
+            }
+
+            .hero-container {
+                width: 457px;
+                height: 359px;
+                right: 21rem;
+                top: 11rem;
+                
+
+                h1 {
+                    font-size: 3.5rem;
+                }
+
+                p {
+                    font-size: 1.125rem;
+                }
+
+                .button2 {
+                    height: 63px;
+                }
+            }
+
+            .hero-tablet {
+                display: none;
+            }
+
+            .hero-desktop {
+                display: inline;
+                width: 991.63px;
+                height: 936.92px;
+                position: relative;
+                bottom: 39rem;
+                left: 36rem;
+                z-index: 1;
+                
+            }
+
+            .course-containers {
+
+                height: 810px;
+                grid-template-columns: 350px 350px 350px;
+                grid-auto-rows: 346px;
+                margin-top: -35rem;
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                article {
+
+                    height: 346px;
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        font-size: 1.125rem;
+                    }
+                }
+            }
+
+            .bottom_container {
+                width: 1440px;
+                height: 120px;
+
+                .button3 {
+                    width: 167px;
+                    height: 56px;
+                    margin-left: 52rem;
+                }
+
+                .light-logo {
+                    width: 111.17px;
+                    height: 27.78px;
+                }
+            }
+        }
+        
+    }
+
+
 }
